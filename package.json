@@ -1,0 +1,28 @@
+{
+  "name": "handlebars",
+  "version": "1.0.0",
+  "description": "burger-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSporman/node-handlebars.git"
+  },
+  "keywords": [
+    "bobby"
+  ],
+  "author": "bobby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSporman/node-handlebars/issues"
+  },
+  "homepage": "https://github.com/RSporman/node-handlebars#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
