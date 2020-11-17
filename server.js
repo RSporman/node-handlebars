@@ -1,5 +1,5 @@
 var express = require("express");
-
+var path = require ('path');
 var PORT = process.env.PORT || 8080;
 
 var app = express();
@@ -12,10 +12,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+var hbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
+app.engine('hbs', hbs({
+    extname: 'hbs', 
+    defaultLayout: 'base', 
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    // partialsDir  : [
+    //     //  path to your partials
+    //     path.join(__dirname, 'views/partials'),
+    // ]
+}));
+
+app.set("view engine", "hbs");
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgersController.js");
