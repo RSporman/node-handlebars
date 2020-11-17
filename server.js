@@ -12,21 +12,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-var hbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
-app.engine('hbs', hbs({
-    extname: 'hbs', 
-    defaultLayout: 'base', 
-    layoutsDir: path.join(__dirname, 'views/layouts'),
-    // partialsDir  : [
-    //     //  path to your partials
-    //     path.join(__dirname, 'views/partials'),
-    // ]
-}));
+// app.engine('hbs', hbs({
+//     extname: 'hbs', 
+//     defaultLayout: 'base', 
+//     layoutsDir: path.join(__dirname, 'views/layouts'),
+//     // partialsDir  : [
+//     //     //  path to your partials
+//     //     path.join(__dirname, 'views/partials'),
+//     // ]
+// }));
 
-app.set("view engine", "hbs");
+app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgersController.js");
