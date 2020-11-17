@@ -1,0 +1,19 @@
+body{
+    background-image: url('https://i.cdn.tbs.com/assets/images/2017/03/BobsBurgers-Logo-900x360.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1{
+    color:black;
+    text-align: center;
+    margin-bottom: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+.row{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* filter: blur(8px); */
