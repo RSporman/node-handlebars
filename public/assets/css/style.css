@@ -6,10 +6,11 @@ body{
 }
 
 h1{
-    color:black;
+    color: red;
     text-align: center;
     margin-bottom: 150px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stalinist One', cursive;
+    
 }
 .row{
     color: black;
